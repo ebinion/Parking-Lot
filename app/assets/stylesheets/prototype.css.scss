@@ -1,0 +1,101 @@
+$text_color: #333;
+$spacing: 15px;
+$spacing_small: 5px;
+$rounding: 5px;
+$border: 1px solid #ddd;
+
+body{
+	background:#eee;
+	color:$text_color;
+	font-family:"Helvetica Neue", Helvetica, sans-serif;
+	font-size: .875em;
+}
+.column{
+	box-sizing: -webkit-border-box;
+	box-sizing: -moz-border-box;
+	box-sizing: border-box;
+	float: left;
+	padding:$spacing;
+	&.left{
+		width:35%;
+	}
+	&.right{
+		width:65%;
+	}
+}
+
+h1, h2, h3, h4, h5{
+	font-weight:bold;
+}
+h1{
+	font-size:3.5em;
+	line-height:.7;
+	padding:$spacing;
+	padding-top:0;
+	
+	small{
+		font-size:.5em;
+		font-weight:300;
+	}
+}
+h2{
+	font-size:2em;
+	margin-bottom:$spacing;
+}
+
+form{
+	background-color:#fff;
+	border:$border;
+	border-radius:$rounding;
+	display:block;
+	margin:$spacing 0;
+	padding:0 $spacing;
+	
+	.field{
+		margin:$spacing 0;
+	}
+	
+	label{
+		font-weight:bold;
+	}
+	
+	textarea, input[type="text"], input[type="submit"]{
+		border:$border;
+		border-radius:$rounding;
+		box-sizing: -webkit-border-box;
+		box-sizing: -moz-border-box;
+		box-sizing: border-box;
+		font-size: 1.3em;
+		padding:$spacing_small;
+		width:100%;
+		
+		&:focus, &:hover{
+			border-color:#000;
+			outline:none;
+		}
+	}
+	
+	textarea{
+		min-height:150px;
+	}
+	
+	input[type="submit"]{
+		background:#0B3;
+		border:none;
+		color:#fff;
+		padding:10px;
+		
+		&:hover{
+			background:#091;
+		}
+	}
+}
+
+ul#questions{
+	
+	li{
+		background-color:#fafafa;
+		border-radius:$rounding;
+		padding:$spacing;
+	}
+}

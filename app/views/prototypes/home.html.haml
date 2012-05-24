@@ -1,0 +1,28 @@
+.left.column
+	%header#branding
+		%h1 
+			Parking Lot
+			%br 
+			%small A place to park your questions
+	= form_tag "#", :method => :post, :id => "question_form" do
+		.field
+			= label_tag "question", "What's your question?"
+			%br
+			= text_area_tag "question"
+		.field
+			= label_tag "email", "What's your email address?"
+			%br
+			= text_field_tag "email"
+		.field
+			= submit_tag "submit"
+.right.column
+	%h2 Today's questions
+	%ul{:id => "questions"}
+		- 20.times do
+			%li
+				%p.question How would I DRY up the code you put in the sessions controller on lines 18 - 34?
+				%p.user_info 
+					%img{:src => "http://www.gravatar.com/avatar/00000000000000000000000000000000", :class => "profile_pic"}
+					posted by 
+					= link_to "Sean Penn", "#"
+					5 mins ago
